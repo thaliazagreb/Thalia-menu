@@ -1,327 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Thalia menu</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Thalia Menu</title>
 
 <style>
-:root{
-  --text:#FCFFA1;
-  --bar:#609841;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Albert Sans", sans-serif;
+    background-image: url('Frame 1.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top center;
+    color: #FCFFA1;
+    display: flex;
+    justify-content: center;
 }
 
-*{box-sizing:border-box}
-
-html, body{
-  margin:0;
-  min-height:100%;
-  background:#061f12;
+.container {
+    width: 92%;
+    max-width: 320px;
+    padding: 20px 0 60px;
 }
 
-body{
-  font-family:"Albert Sans", Arial, sans-serif;
-  font-weight:300;
-  color:var(--text);
+.logo {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
-/* Ovo forsira da i na laptopu izgleda kao uska mobile stranica */
-.phone-page{
-  width:100%;
-  max-width:390px;
-  min-height:100vh;
-  margin:0 auto;
-  padding:18px 30px 90px;
-  background-image:url("Frame 1.png");
-  background-size:100% auto;
-  background-repeat:repeat-y;
-  background-position:top center;
-  overflow:hidden;
+.section-title {
+    background: rgba(96, 152, 65, 0.7);
+    padding: 6px 10px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.logo{
-  display:block;
-  width:100%;
-  margin:0 auto 26px;
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 1.35;
 }
 
-.section{
-  margin:0 0 23px;
+.item-name {
+    flex: 1;
 }
 
-.section-title{
-  background:rgba(96,152,65,.92);
-  color:var(--text);
-  font-size:13px;
-  font-weight:500;
-  text-transform:uppercase;
-  line-height:1;
-  padding:4px 11px 5px;
-  width:62%;
-  margin:0 0 12px;
+.price {
+    min-width: 74px;
+    text-align: right;
+    white-space: nowrap;
 }
 
-.sub-title{
-  font-size:17px;
-  font-weight:500;
-  text-transform:uppercase;
-  margin:19px 0 10px;
-}
-
-.row{
-  display:grid;
-  grid-template-columns:minmax(0, 1fr) 55px 34px;
-  column-gap:5px;
-  align-items:baseline;
-  font-size:16px;
-  line-height:1.08;
-  margin-bottom:3px;
-}
-
-.name{
-  min-width:0;
-}
-
-.amount{
-  text-align:right;
-  white-space:nowrap;
-}
-
-.currency{
-  text-align:left;
-  white-space:nowrap;
-  font-size:13px;
-  opacity:.9;
-}
-
-.notice{
-  margin-top:34px;
-  font-size:9px;
-  text-align:center;
-  line-height:1.3;
-  opacity:.85;
-}
-
-@media (max-width:390px){
-  .phone-page{
-    max-width:none;
-    width:100%;
-  }
-}
-
-@media (max-width:350px){
-  .phone-page{padding-left:24px;padding-right:24px;}
-  .row{font-size:15px;grid-template-columns:minmax(0, 1fr) 52px 31px;}
-  .currency{font-size:12px;}
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 </style>
 </head>
 
 <body>
-<main class="phone-page">
+
+<div class="container">
 
 <img src="thalia logo.png" class="logo" alt="Thalia logo">
 
-<section class="section">
-<div class="section-title">Kave i topli napitci</div>
-<div class="row"><span class="name">Kava</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Kava mlijeko</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Kava mlij. mala</span><span class="amount">1,60</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bijela kava</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Čaj-razni + med</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Nes caffe</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Kava bez kofeina</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Med</span><span class="amount">0,50</span><span class="currency">EUR</span></div>
-</section>
+<div class="section-title">KAVE I TOPLI NAPITCI</div>
 
-<section class="section">
-<div class="section-title">Sokovi</div>
-<div class="row"><span class="name">Coca Cola 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Coca Cola 1,25 dcl</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Fanta 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Cockta 0,275</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bitter lemon 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bitter lemon 1,25 dcl</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Tonic 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Tonic 1,25 dcl</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Tangerine 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Orangina 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Sprite 0,25</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Red Bull 0,25</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Twist 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Prir. sok 0,20</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Prir. sok 0,10</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Ledeni čaj 0,20</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Cedevita</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Štruk 0,02</span><span class="amount">0,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Limunada</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Coca Cola lim. 0,33</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Fanta 0,33</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-</section>
+<div class="menu-item"><span class="item-name">Kava</span><span class="price">1,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Kava mlijeko</span><span class="price">2,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Kava mlij. mala</span><span class="price">1,60 EUR</span></div>
+<div class="menu-item"><span class="item-name">Bijela kava</span><span class="price">2,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Čaj-razni + med</span><span class="price">1,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Nes caffe</span><span class="price">2,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Kava bez kofeina</span><span class="price">2,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Med</span><span class="price">0,50 EUR</span></div>
 
-<section class="section">
-<div class="section-title">Voda</div>
-<div class="row"><span class="name">Voda 1 L</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Voda 2 dcl</span><span class="amount">1,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Mineralna 0,33</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jana 0,33</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Sensation 0,25</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="section-title">SOKOVI</div>
 
-<section class="section">
-<div class="section-title">Pivo</div>
-<div class="row"><span class="name">Tuborg 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Carlsberg 0,33</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Lager 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Zlatni 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Tamni 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan bez alkohola 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Radler 0,50</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Budweiser 0,50</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Budweiser tamni 0,50</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Lager 0,35</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pan Zlatni 0,35</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Budweiser 0,33</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Grimbergen 0,33</span><span class="amount">4,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Blanc 1664 0,33</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="menu-item"><span class="item-name">Coca Cola 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Coca Cola 1,25 dcl</span><span class="price">1,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Fanta 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Cockta 0,275</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Bitter lemon 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Bitter lemon 1,25 dcl</span><span class="price">1,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Tonic 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Tonic 1,25 dcl</span><span class="price">1,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Tangerine 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Orangina 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Sprite 0,25</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Red Bull 0,25</span><span class="price">4,00 EUR</span></div>
 
-<section class="section">
-<div class="section-title">Vino</div>
-<div class="row"><span class="name">Crno vino 1 L</span><span class="amount">16,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Crno vino 1 dcl</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Crno vino 2 dcl</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Kuhano vino</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Rizling 1 L</span><span class="amount">16,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Rizling 1 dcl</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Rizling 2 dcl</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Gemišt 0,20</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Gemišt 0,30</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Butelje 0,75</span><span class="amount">20,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vrh. butelje 0,75</span><span class="amount">35,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Moet Chandon 0,75</span><span class="amount">150,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Freixenet 0,20</span><span class="amount">13,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Freixenet 0,75</span><span class="amount">30,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Somersby 0,33</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="section-title">VODA</div>
 
-<section class="section">
-<div class="section-title">Kombinacije</div>
-<div class="row"><span class="name">Bambus veliki</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bambus mali</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Gin tonic</span><span class="amount">1,60</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Stock Cola</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vodka Juice</span><span class="amount">1,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vodka Red Bull</span><span class="amount">6,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vodka Tonic</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vodka Bitter Lemon</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Ballantines Cola</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jeger Cola</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Skinny Beach</span><span class="amount">4,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Mojito</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Cuba Libre</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Havana Cola</span><span class="amount">4,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Red Bull +3 vodka</span><span class="amount">9,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">2x Jameson Cola</span><span class="amount">9,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">2x Jacky Cola</span><span class="amount">8,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">2x Vodka Juice</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Rakija 4+1</span><span class="amount">10,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vilijamovka 2+1</span><span class="amount">9,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">2x Jameson Cola</span><span class="amount">9,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">2x Gin tonic</span><span class="amount">7,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="menu-item"><span class="item-name">Voda 1 L</span><span class="price">4,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Voda 2 dcl</span><span class="price">1,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Mineralna 0,33</span><span class="price">3,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Jana 0,33</span><span class="price">3,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Sensation 0,25</span><span class="price">3,00 EUR</span></div>
 
-<section class="section">
-<div class="section-title">Domaća žestoka</div>
-<div class="row"><span class="name">Stock</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Travarica</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Luksusova 0,03</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vodka domaća</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinkovac</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Amaro 18 0,03</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinkovac štrukani 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinkovac antique 0,03</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Domaći rum 0,03</span><span class="amount">2,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Višnja</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Šljiva</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Borovnica</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Vilijamovka</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Medica</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Likeri voćni 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Orahovac 0,03</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Gin</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinkovac Heritage</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinova 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Pelinova 2+1</span><span class="amount">6,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="section-title">PIVO</div>
 
-<section class="section">
-<div class="section-title">Strana žestoka</div>
+<div class="menu-item"><span class="item-name">Tuborg 0,50</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Carlsberg 0,33</span><span class="price">4,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Pan Lager 0,50</span><span class="price">3,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Pan Zlatni 0,50</span><span class="price">3,50 EUR</span></div>
 
-<div class="sub-title">Whiskey</div>
-<div class="row"><span class="name">Ballantine’s</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Johnnie Walker</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jameson</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jameson Sel. Reserve 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jack Daniel’s</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jim Beam 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Four Roses 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Black Label 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Chivas 12</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Chivas 18 0,03</span><span class="amount">9,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Glenlivet 0,03</span><span class="amount">8,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Ballantine’s 12Y 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Maker’s Mark 0,03</span><span class="amount">6,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Gentleman Jack 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jack Single Barrel 0,03</span><span class="amount">6,00</span><span class="currency">EUR</span></div>
+<div class="section-title">VINO</div>
 
-<div class="sub-title">Cognac</div>
-<div class="row"><span class="name">Martell 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Hennessy 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Courvoisier 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Martell V.S.O.P 0,03</span><span class="amount">7,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Hennessy V.S.O.P 0,03</span><span class="amount">7,00</span><span class="currency">EUR</span></div>
+<div class="menu-item"><span class="item-name">Crno vino 1 L</span><span class="price">16,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Crno vino 1 dcl</span><span class="price">2,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Crno vino 2 dcl</span><span class="price">3,00 EUR</span></div>
 
-<div class="sub-title">Tequilla</div>
-<div class="row"><span class="name">Tequila</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Olmeca Gold 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
+<div class="section-title">KOMBINACIJE</div>
 
-<div class="sub-title">Gin</div>
-<div class="row"><span class="name">Beefeater gin 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bombay gin 0,03</span><span class="amount">4,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Hendrick’s 0,03</span><span class="amount">5,00</span><span class="currency">EUR</span></div>
+<div class="menu-item"><span class="item-name">Gin tonic</span><span class="price">6,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Vodka Red Bull</span><span class="price">6,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Mojito</span><span class="price">5,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Cuba Libre</span><span class="price">5,00 EUR</span></div>
 
-<div class="sub-title">Rum</div>
-<div class="row"><span class="name">Havana Especial 0,03</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Havana 3yo 0,03</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bacardi</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
+<div class="section-title">DOMAĆA ŽESTOKA</div>
 
-<div class="sub-title">Vodka</div>
-<div class="row"><span class="name">Wyborowa vodka 0,03</span><span class="amount">6,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Absolut vodka</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
+<div class="menu-item"><span class="item-name">Stock</span><span class="price">2,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Travarica</span><span class="price">2,50 EUR</span></div>
+<div class="menu-item"><span class="item-name">Pelinkovac</span><span class="price">2,50 EUR</span></div>
 
-<div class="sub-title">Liquers</div>
-<div class="row"><span class="name">Campari 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Jägermeister</span><span class="amount">3,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Southern Comfort 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Becherovka 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Borovnica</span><span class="amount">2,50</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Bailey’s 0,03</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-<div class="row"><span class="name">Martini 0,06</span><span class="amount">3,00</span><span class="currency">EUR</span></div>
-</section>
+<div class="section-title">STRANA ŽESTOKA</div>
 
-<div class="notice">
+<div class="menu-item"><span class="item-name">Ballantine’s</span><span class="price">3,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Jameson</span><span class="price">3,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Jack Daniel’s</span><span class="price">3,00 EUR</span></div>
+<div class="menu-item"><span class="item-name">Hendrick’s 0,03</span><span class="price">5,00 EUR</span></div>
+
+<div class="footer">
 Zabranjeno točenje i usluživanje alkoholnih pića osobama mlađim od 18 god.<br>
-Cijene su izražene u EUR.<br>
-Porezi uračunati u cijenu / Ne odgovaramo za izgubljene stvari.<br>
-Caffe bar i noćni klub Thalia, Teslina 7, Zagreb
+Cijene su izražene u EUR.
 </div>
 
-</main>
+</div>
+
 </body>
 </html>
