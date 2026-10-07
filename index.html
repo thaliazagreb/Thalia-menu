@@ -29,7 +29,6 @@ body{
   color:var(--text);
 }
 
-/* Ovo forsira da i na laptopu izgleda kao uska mobile stranica */
 .phone-page{
   width:100%;
   max-width:390px;
@@ -79,17 +78,14 @@ body{
   align-self:start;
 }
 
-.sub-title{
-  font-size:17px;
-  font-weight:500;
-  text-transform:uppercase;
-  margin:19px 0 10px;
-}
-
 .row{
   display:grid;
   grid-template-columns:minmax(0, 1fr) 72px 72px;
   column-gap:4px;
+  align-items:baseline;
+  font-size:15px;
+  line-height:1.08;
+  margin-bottom:3px;
 }
 
 .price-heading{
@@ -106,13 +102,6 @@ body{
   margin-top:2px;
   font-size:9px;
   font-weight:400;
-}
-
-.row{
-  align-items:baseline;
-  font-size:15px;
-  line-height:1.08;
-  margin-bottom:3px;
 }
 
 .name{
@@ -143,7 +132,10 @@ body{
 
 @media (max-width:350px){
   .phone-page{padding-left:24px;padding-right:24px;}
-  .menu-header, .row{grid-template-columns:minmax(0, 1fr) 66px 66px;column-gap:3px;}
+  .menu-header, .row{
+    grid-template-columns:minmax(0, 1fr) 66px 66px;
+    column-gap:3px;
+  }
   .row{font-size:14px;}
   .price-heading{font-size:9px;}
   .price-heading .date{font-size:8px;}
@@ -175,20 +167,16 @@ body{
 <section class="section">
 <div class="section-title">Sokovi</div>
 <div class="row"><span class="name">Coca Cola 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Coca Cola 1,25 dcl</span><span class="amount">1,50</span><span class="current">1,50</span></div>
 <div class="row"><span class="name">Fanta 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Cockta 0,275</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Bitter lemon 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Bitter lemon 1,25 dcl</span><span class="amount">1,50</span><span class="current">1,50</span></div>
 <div class="row"><span class="name">Tonic 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Tonic 1,25 dcl</span><span class="amount">1,50</span><span class="current">1,50</span></div>
 <div class="row"><span class="name">Tangerine 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Orangina 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Sprite 0,25</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Red Bull 0,25</span><span class="amount">4,00</span><span class="current">4,00</span></div>
 <div class="row"><span class="name">Twist 0,50</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Prir. sok 0,20</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Prir. sok 0,10</span><span class="amount">2,00</span><span class="current">2,00</span></div>
 <div class="row"><span class="name">Ledeni čaj 0,20</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Cedevita</span><span class="amount">2,00</span><span class="current">2,00</span></div>
 <div class="row"><span class="name">Štruk 0,02</span><span class="amount">0,50</span><span class="current">0,50</span></div>
@@ -208,7 +196,7 @@ body{
 
 <section class="section">
 <div class="section-title">Pivo</div>
-<div class="row"><span class="name">Tuborg 0,50</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Tuborg pivo</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Carlsberg 0,33</span><span class="amount">4,00</span><span class="current">4,00</span></div>
 <div class="row"><span class="name">Pan Lager 0,50</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Pan Zlatni 0,50</span><span class="amount">3,50</span><span class="current">3,50</span></div>
@@ -245,27 +233,19 @@ body{
 
 <section class="section">
 <div class="section-title">Kombinacije</div>
-<div class="row"><span class="name">Bambus veliki</span><span class="amount">1,50</span><span class="current">1,50</span></div>
+<div class="row"><span class="name">Bambus veliki</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Bambus mali</span><span class="amount">2,00</span><span class="current">2,00</span></div>
-<div class="row"><span class="name">Gin tonic</span><span class="amount">1,60</span><span class="current">1,60</span></div>
-<div class="row"><span class="name">Stock Cola</span><span class="amount">2,00</span><span class="current">2,00</span></div>
-<div class="row"><span class="name">Vodka Juice</span><span class="amount">1,50</span><span class="current">1,50</span></div>
-<div class="row"><span class="name">Vodka Red Bull</span><span class="amount">6,50</span><span class="current">6,50</span></div>
-<div class="row"><span class="name">Vodka Tonic</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Vodka Bitter Lemon</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Gin tonic</span><span class="amount">4,00</span><span class="current">4,00</span></div>
+<div class="row"><span class="name">Stock Cola</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Vodka Juice</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Ballantines Cola</span><span class="amount">4,00</span><span class="current">4,00</span></div>
-<div class="row"><span class="name">Jeger Cola</span><span class="amount">4,00</span><span class="current">4,00</span></div>
+<div class="row"><span class="name">Jager Cola</span><span class="amount">4,00</span><span class="current">4,00</span></div>
 <div class="row"><span class="name">Skinny Beach</span><span class="amount">4,50</span><span class="current">4,50</span></div>
-<div class="row"><span class="name">Mojito</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-<div class="row"><span class="name">Cuba Libre</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-<div class="row"><span class="name">Havana Cola</span><span class="amount">4,50</span><span class="current">4,50</span></div>
 <div class="row"><span class="name">Red Bull +3 vodka</span><span class="amount">9,00</span><span class="current">9,00</span></div>
 <div class="row"><span class="name">2x Jameson Cola</span><span class="amount">9,00</span><span class="current">9,00</span></div>
 <div class="row"><span class="name">2x Jacky Cola</span><span class="amount">8,00</span><span class="current">8,00</span></div>
 <div class="row"><span class="name">2x Vodka Juice</span><span class="amount">5,00</span><span class="current">5,00</span></div>
 <div class="row"><span class="name">Rakija 4+1</span><span class="amount">10,00</span><span class="current">10,00</span></div>
-<div class="row"><span class="name">Vilijamovka 2+1</span><span class="amount">9,00</span><span class="current">9,00</span></div>
-<div class="row"><span class="name">2x Jameson Cola</span><span class="amount">9,00</span><span class="current">9,00</span></div>
 <div class="row"><span class="name">2x Gin tonic</span><span class="amount">7,00</span><span class="current">7,00</span></div>
 </section>
 
@@ -273,7 +253,7 @@ body{
 <div class="section-title">Domaća žestoka</div>
 <div class="row"><span class="name">Stock</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Travarica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
-<div class="row"><span class="name">Luksusova 0,03</span><span class="amount">2,50</span><span class="current">2,50</span></div>
+<div class="row"><span class="name">Luksusowa 0,03</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Vodka domaća</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Pelinkovac</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Amaro 18 0,03</span><span class="amount">2,50</span><span class="current">2,50</span></div>
@@ -282,9 +262,6 @@ body{
 <div class="row"><span class="name">Domaći rum 0,03</span><span class="amount">2,00</span><span class="current">2,00</span></div>
 <div class="row"><span class="name">Višnja</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Šljiva</span><span class="amount">2,50</span><span class="current">2,50</span></div>
-<div class="row"><span class="name">Borovnica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
-<div class="row"><span class="name">Vilijamovka</span><span class="amount">4,00</span><span class="current">4,00</span></div>
-<div class="row"><span class="name">Medica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Likeri voćni 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Orahovac 0,03</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Gin</span><span class="amount">3,00</span><span class="current">3,00</span></div>
@@ -295,8 +272,17 @@ body{
 
 <section class="section">
 <div class="section-title">Strana žestoka</div>
-
-<div class="sub-title">Whiskey</div>
+<div class="row"><span class="name">Martini 0,06</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Campari 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Jägermeister</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Havana Especial 0,03</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Havana 3yo 0,03</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Bacardi</span><span class="amount">3,50</span><span class="current">3,50</span></div>
+<div class="row"><span class="name">Beefeater gin 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Bombay gin 0,03</span><span class="amount">4,00</span><span class="current">4,00</span></div>
+<div class="row"><span class="name">Hendrick’s 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
+<div class="row"><span class="name">Premium vodka 0,03</span><span class="amount">6,50</span><span class="current">6,50</span></div>
+<div class="row"><span class="name">Absolut vodka</span><span class="amount">3,50</span><span class="current">3,50</span></div>
 <div class="row"><span class="name">Ballantine’s</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Johnnie Walker</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Jameson</span><span class="amount">3,00</span><span class="current">3,00</span></div>
@@ -304,6 +290,14 @@ body{
 <div class="row"><span class="name">Jack Daniel’s</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Jim Beam 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Four Roses 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Southern Comfort 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Becherovka 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Martell 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
+<div class="row"><span class="name">Hennessy 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
+<div class="row"><span class="name">Courvoisier 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
+<div class="row"><span class="name">Martell V.S.O.P 0,03</span><span class="amount">7,00</span><span class="current">7,00</span></div>
+<div class="row"><span class="name">Hennessy V.S.O.P 0,03</span><span class="amount">7,00</span><span class="current">7,00</span></div>
+<div class="row"><span class="name">Borovnica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Black Label 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
 <div class="row"><span class="name">Chivas 12</span><span class="amount">5,00</span><span class="current">5,00</span></div>
 <div class="row"><span class="name">Chivas 18 0,03</span><span class="amount">9,00</span><span class="current">9,00</span></div>
@@ -312,40 +306,12 @@ body{
 <div class="row"><span class="name">Maker’s Mark 0,03</span><span class="amount">6,00</span><span class="current">6,00</span></div>
 <div class="row"><span class="name">Gentleman Jack 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
 <div class="row"><span class="name">Jack Single Barrel 0,03</span><span class="amount">6,00</span><span class="current">6,00</span></div>
-
-<div class="sub-title">Cognac</div>
-<div class="row"><span class="name">Martell 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-<div class="row"><span class="name">Hennessy 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-<div class="row"><span class="name">Courvoisier 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-<div class="row"><span class="name">Martell V.S.O.P 0,03</span><span class="amount">7,00</span><span class="current">7,00</span></div>
-<div class="row"><span class="name">Hennessy V.S.O.P 0,03</span><span class="amount">7,00</span><span class="current">7,00</span></div>
-
-<div class="sub-title">Tequilla</div>
+<div class="row"><span class="name">Bailey’s 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
 <div class="row"><span class="name">Tequila</span><span class="amount">2,50</span><span class="current">2,50</span></div>
 <div class="row"><span class="name">Olmeca Gold 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-
-<div class="sub-title">Gin</div>
-<div class="row"><span class="name">Beefeater gin 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-<div class="row"><span class="name">Bombay gin 0,03</span><span class="amount">4,00</span><span class="current">4,00</span></div>
-<div class="row"><span class="name">Hendrick’s 0,03</span><span class="amount">5,00</span><span class="current">5,00</span></div>
-
-<div class="sub-title">Rum</div>
-<div class="row"><span class="name">Havana Especial 0,03</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Havana 3yo 0,03</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Bacardi</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-
-<div class="sub-title">Vodka</div>
-<div class="row"><span class="name">Wyborowa vodka 0,03</span><span class="amount">6,50</span><span class="current">6,50</span></div>
-<div class="row"><span class="name">Absolut vodka</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-
-<div class="sub-title">Liquers</div>
-<div class="row"><span class="name">Campari 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-<div class="row"><span class="name">Jägermeister</span><span class="amount">3,50</span><span class="current">3,50</span></div>
-<div class="row"><span class="name">Southern Comfort 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-<div class="row"><span class="name">Becherovka 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-<div class="row"><span class="name">Borovnica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
-<div class="row"><span class="name">Bailey’s 0,03</span><span class="amount">3,00</span><span class="current">3,00</span></div>
-<div class="row"><span class="name">Martini 0,06</span><span class="amount">3,00</span><span class="current">3,00</span></div>
+<div class="row"><span class="name">Vilijamovka</span><span class="amount">4,00</span><span class="current">4,00</span></div>
+<div class="row"><span class="name">Medica</span><span class="amount">2,50</span><span class="current">2,50</span></div>
+<div class="row"><span class="name">Vilijamovka 2+1</span><span class="amount">9,00</span><span class="current">9,00</span></div>
 </section>
 
 <div class="notice">
