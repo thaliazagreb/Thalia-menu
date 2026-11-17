@@ -322,5 +322,70 @@ Caffe bar i noćni klub Thalia, Teslina 7, Zagreb
 </div>
 
 </main>
+  
+<style>
+  .csv-download {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 22px;
+    background: #538a3d;
+    color: #fff6a8;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+<button class="csv-download" id="download-csv" type="button">
+  Preuzmi cjenik (CSV)
+</button>
+
+<script>
+document.getElementById("download-csv").addEventListener("click", () => {
+  const rows = [[
+    "Kategorija",
+    "Naziv",
+    "Opis",
+    "Cijena",
+    "Bazna cijena na 10.09.2026.",
+    "Valuta"
+  ]];
+
+  document.querySelectorAll(".section").forEach(section => {
+    const category = section.querySelector(".section-title")
+      ?.textContent.trim() || "";
+
+    section.querySelectorAll(".row").forEach(row => {
+      const name = row.querySelector(".name")?.textContent.trim() || "";
+      const price = row.querySelector(".current")?.textContent.trim() || "";
+
+      if (name && price) {
+        rows.push([category, name, "", price, price, "€"]);
+      }
+    });
+  });
+
+  const csv = "\uFEFF" + rows.map(row =>
+    row.map(value =>
+      '"' + String(value).replace(/"/g, '""') + '"'
+    ).join(",")
+  ).join("\r\n");
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "thalia-cjenik.csv";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+</script>
+
 </body>
 </html>
